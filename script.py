@@ -14,8 +14,13 @@ for page in pages:
     st="  page no "+str(i)
     tex=pytesseract.image_to_string(page)
     tts=gTTS(text=st+tex,lang="en")
-    i=i+1
-    tts.save("hello.mp3")
-    audio = MP3("hello.mp3")
-    os.system("start hello.mp3")
-    sleep(audio.info.length)
+    
+    audio = MP3("hello-"+str(i)+".mp3")
+    if(i==1):
+        tts.save("hello-"+str(i)+".mp3")
+        os.system("start hello-1.mp3")
+    else:
+        tts.save("hello-"+str(i)+".mp3")
+        sleep(audio.info.length)    
+        os.system("start hello-"+str(i)+".mp3")
+    i=i+1    
