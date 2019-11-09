@@ -5,7 +5,7 @@ import os
 from mutagen.mp3 import MP3
 from time import sleep
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract'
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 pages = convert_from_path('sample.pdf')
 
 i=1;
